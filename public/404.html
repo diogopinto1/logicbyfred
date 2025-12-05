@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Redirecting…</title>
+    <meta http-equiv="refresh" content="0; URL=./?/%2F" />
+    <script>
+      // SPA GitHub Pages redirect (https://github.com/rafgraph/spa-github-pages)
+      (function(l) {
+        var p = l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : ''),
+            path = l.pathname.replace(/^(\/logicbyfred)?\/404\.html$/, '');
+        l.replace(p + '/logicbyfred/?/' + path + (l.search ? '&' + l.search.slice(1) : '') + l.hash);
+      })(window.location);
+    </script>
+  </head>
+  <body>Redirecting…</body>
+  </html>
