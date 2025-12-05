@@ -1,0 +1,96 @@
+import { Product } from '@/store/cartStore';
+
+// Public assets live under Vite's BASE_URL. Concatenate safely for dev ('/')
+// and production ('/logicbyfred/').
+const withBase = (p: string) => `${import.meta.env.BASE_URL}${p}`;
+
+export const products: Product[] = [
+  {
+    id: 'abstract-thought-001',
+    name: 'Abstract Thought',
+    price: 68,
+    image: withBase('tshirt1.png'),
+    description: 'A meditation on form and space. This piece explores the boundaries between conscious and unconscious thought, rendered in subtle earth tones that speak to our primordial connection with the natural world.',
+    fabric: '100% Organic Cotton, 180 GSM',
+    fit: 'Relaxed, oversized silhouette',
+    sizes: ['XS', 'S', 'M', 'L', 'XL', 'XXL'],
+    colors: ['Cream', 'Charcoal', 'Sage'],
+    care: ['Machine wash cold', 'Tumble dry low', 'Do not bleach', 'Iron on low heat'],
+    artist: 'fred',
+    year: '2024',
+  },
+  {
+    id: 'silent-geometry-002',
+    name: 'Silent Geometry',
+    price: 72,
+    image: withBase('quadro2.png'),
+    description: 'Precision meets poetry. Clean lines intersect with organic shapes, creating a visual rhythm that challenges conventional notions of order and chaos.',
+    fabric: '100% Organic Cotton, 180 GSM',
+    fit: 'Regular fit, true to size',
+    sizes: ['XS', 'S', 'M', 'L', 'XL', 'XXL'],
+    colors: ['Off-White', 'Stone', 'Deep Navy'],
+    care: ['Machine wash cold', 'Tumble dry low', 'Do not bleach', 'Iron on low heat'],
+    artist: 'fred',
+    year: '2024',
+  },
+  {
+    id: 'temporal-flux-003',
+    name: 'Temporal Flux',
+    price: 78,
+    image: withBase('quadro3.png'),
+    description: 'Time captured in thread. This design embodies the fleeting nature of moments, with gradient transitions that mirror the perpetual dance of light and shadow.',
+    fabric: '100% Organic Cotton, 200 GSM',
+    fit: 'Boxy, dropped shoulders',
+    sizes: ['S', 'M', 'L', 'XL'],
+    colors: ['Bone', 'Rust', 'Midnight'],
+    care: ['Machine wash cold', 'Hang dry recommended', 'Do not bleach', 'Iron on low heat'],
+    artist: 'fred',
+    year: '2024',
+  },
+  {
+    id: 'digital-pastoral-004',
+    name: 'Digital Pastoral',
+    price: 65,
+    image: withBase('quadro4.png'),
+    description: 'Where technology meets tranquility. Pixel-inspired patterns emerge from organic backgrounds, questioning our relationship with the natural and artificial.',
+    fabric: '100% Organic Cotton, 180 GSM',
+    fit: 'Relaxed, classic cut',
+    sizes: ['XS', 'S', 'M', 'L', 'XL'],
+    colors: ['Natural', 'Olive', 'Clay'],
+    care: ['Machine wash cold', 'Tumble dry low', 'Do not bleach', 'Iron on low heat'],
+    artist: 'fred',
+    year: '2024',
+  },
+  {
+    id: 'echo-chamber-005',
+    name: 'Echo Chamber',
+    price: 70,
+    image: withBase('quadro5.png'),
+    description: 'Repetition as revelation. Concentric patterns spiral inward, inviting contemplation on the recursive nature of thought and the echoes that shape our perception.',
+    fabric: '100% Organic Cotton, 180 GSM',
+    fit: 'Oversized, elongated body',
+    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    colors: ['Ecru', 'Charcoal', 'Terracotta'],
+    care: ['Machine wash cold', 'Tumble dry low', 'Do not bleach', 'Iron on low heat'],
+    artist: 'fred',
+    year: '2024',
+  },
+  {
+    id: 'minimalist-manifesto-006',
+    name: 'Minimalist Manifesto',
+    price: 62,
+    image: withBase('quadro1.png'),
+    description: 'Less speaks volumes. A single, deliberate stroke becomes a statement of intent. This piece celebrates the power of restraint and the beauty found in simplicity.',
+    fabric: '100% Organic Cotton, 160 GSM',
+    fit: 'Slim fit, slightly cropped',
+    sizes: ['XS', 'S', 'M', 'L', 'XL'],
+    colors: ['White', 'Black', 'Warm Grey'],
+    care: ['Machine wash cold', 'Tumble dry low', 'Do not bleach', 'Iron on low heat'],
+    artist: 'fred',
+    year: '2024',
+  },
+];
+
+export const getProductById = (id: string): Product | undefined => {
+  return products.find((product) => product.id === id);
+};
